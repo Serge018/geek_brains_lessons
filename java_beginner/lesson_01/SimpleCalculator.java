@@ -7,16 +7,9 @@ public class SimpleCalculator{
         int a = 1;
         int b = 2;
         int summ = a + b;
-        String massage;
 
-        if (summ > 0){
-            massage = "Сумма положительная";
-        } else if (summ < 0){
-            massage = "Сумма отрицательная";
-        } else {
-            massage = "Сумма ровна нулю";
-        }
+        String massage = (summ <= 0? "Сумма положительная" : "Сумма отрицательная");
 
         System.out.println(massage);
-    }   
+    }
 }
