@@ -1,9 +1,15 @@
+/**
+ * Java 1. Homework 2
+ *
+ * @author Sergey Ivenskiy
+ * @version 05.10.2021
+ */
 public class Lesson02 {
     public static void main(String[] args) {
         checkSummContainedInRange(8, 4);
         printInfoNumberSign(-1);
         isNegativeNumber(0);
-        printWordInLoop("Вася", 2);
+        printWordInLoop("Vasya", 2);
     }
 
     public static boolean checkSummContainedInRange(int a, int b) {
