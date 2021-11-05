@@ -3,6 +3,7 @@ public class Lesson02 {
         checkSummContainedInRange(8, 4);
         printInfoNumberSign(-1);
         isNegativeNumber(0);
+        printWordInLoop("Вася", 2);
     }
 
     public static boolean checkSummContainedInRange(int a, int b) {
@@ -32,5 +33,11 @@ public class Lesson02 {
         boolean result = (number < 0);
 
         return result;
+    }
+
+    public static void printWordInLoop(String word, int totalIterations) {
+        for (int currentIteration = 0; currentIteration < totalIterations; currentIteration++) {
+            System.out.println(word);
+        }
     }
 }
