@@ -1,6 +1,7 @@
 public class Lesson02 {
     public static void main(String[] args) {
         checkSummContainedInRange(8, 4);
+        printInfoNumberSign(-1);
     }
 
     public static boolean checkSummContainedInRange(int a, int b) {
@@ -11,5 +12,18 @@ public class Lesson02 {
         boolean isContain = (summ >= rangeStart && summ <= rangeEnd);
 
         return isContain;
+    }
+
+    public static void printInfoNumberSign(int number) {
+        boolean isNegativeNumber = (number < 0);
+        String message;
+
+        if (isNegativeNumber) {
+            message = "This number is negative";
+        } else {
+            message = "This number is positive";
+        }
+
+        System.out.println(message);
     }
 }
