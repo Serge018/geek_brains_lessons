@@ -1,9 +1,9 @@
-public class Lesson02{
-    public static void main(String[] args){
+public class Lesson02 {
+    public static void main(String[] args) {
         checkSummContainedInRange(8, 4);
     }
 
-    public static boolean checkSummContainedInRange(int a, int b){
+    public static boolean checkSummContainedInRange(int a, int b) {
         int rangeStart = 10;
         int rangeEnd = 21;
 
