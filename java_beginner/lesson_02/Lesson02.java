@@ -2,6 +2,7 @@ public class Lesson02 {
     public static void main(String[] args) {
         checkSummContainedInRange(8, 4);
         printInfoNumberSign(-1);
+        isNegativeNumber(0);
     }
 
     public static boolean checkSummContainedInRange(int a, int b) {
@@ -25,5 +26,11 @@ public class Lesson02 {
         }
 
         System.out.println(message);
+    }
+
+    public static boolean isNegativeNumber(int number) {
+        boolean result = (number < 0);
+
+        return result;
     }
 }
