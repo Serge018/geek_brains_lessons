@@ -16,7 +16,7 @@ public class Lesson02 {
     }
 
     public static void printInfoNumberSign(int number) {
-        boolean isNegativeNumber = (number < 0);
+        boolean isNegativeNumber = isNegativeNumber(number);
         String message;
 
         if (isNegativeNumber) {
