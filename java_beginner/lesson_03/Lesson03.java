@@ -38,11 +38,20 @@ public class Lesson03 {
 
         // task 6
         printMinAndMaxValues(array);
+
+        // task 7
+        int[] arrayWithBalance = {1, 5, 3, 1, 11, 3, 8,  9, 1};
+        int[] arrayWithoutBalance = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        boolean result;
+
+        result = checkBalance(arrayWithBalance);
+        // System.out.println("result arrayWithBalance - " + result);
+        result = checkBalance(arrayWithoutBalance);
+        // System.out.println("result arrayWithoutBalance - " + result);
     }
 
 
-    static int[] getArrayRandomBinary()
-    {
+    static int[] getArrayRandomBinary() {
         Random random = new Random();
         int arrayLength = random.nextInt(10) + 1;
         int[] arrayBinary = new int[arrayLength];
@@ -147,5 +156,32 @@ public class Lesson03 {
 
         System.out.println("minValue : " + minValue);
         System.out.println("maxValue : " + maxValue);
+    }
+
+
+    static boolean checkBalance(int[] array) {
+        int arrayLength = array.length;
+        boolean result = false;
+
+        int totalSumm = 0;
+        int[] summsTraverseRight = new int[arrayLength];
+
+        for (int index = arrayLength - 1; index >= 0; index--) {
+            totalSumm += array[index];
+            summsTraverseRight[index] = totalSumm;
+        }
+
+        totalSumm = 0;
+        for (int index = 0; index < arrayLength; index++) {
+            if (totalSumm == summsTraverseRight[index])
+            {
+                result = true;
+                break;
+            }
+
+            totalSumm += array[index];
+        }
+
+        return result;
     }
 }
