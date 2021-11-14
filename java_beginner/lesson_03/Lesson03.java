@@ -12,14 +12,25 @@ public class Lesson03 {
     public static void main(String[] args) {
         // task 1
         int[] arrayBinary = getArrayRandomBinary();
+        //System.out.println(Arrays.toString(arrayBinary));
         setArrayRandomBinaryAlternativeValues(arrayBinary);
+        //System.out.println(Arrays.toString(arrayBinary));
 
         // task 2
         int[] rangefrom1To100 = getRangefrom1To100();
+        // System.out.println(Arrays.toString(rangefrom1To100));
 
         // task 3
         int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         forEachMultiple(array, 2, 6);
+        // System.out.println(Arrays.toString(array));
+
+        // task 4
+        int[][] twoDimensionalArray = getTwoDimensionalArray(7);
+        setTwoDimensionalArrayDiagonalsValue(twoDimensionalArray, 1);
+        // for (int i = 0; i < twoDimensionalArray.length; i++) {
+        //     System.out.println(Arrays.toString(twoDimensionalArray[i]) + '\n');
+        // }
     }
 
 
@@ -71,6 +82,30 @@ public class Lesson03 {
             if (currentValue <= maxMultiplicand) {
                 array[iterate] = currentValue * factor;
             }
+        }
+
+        return array;
+    }
+
+
+    static int[][] getTwoDimensionalArray(int arrayLength) {
+        int[][] array = new int[arrayLength][arrayLength];
+
+        return array;
+    }
+
+
+    static int[][] setTwoDimensionalArrayDiagonalsValue(int[][] array, int value) {
+        int arrayLength = array.length;
+        int lastIndex = arrayLength - 1;
+
+        for (int iterate = 0; iterate < arrayLength; iterate++) {
+            // Firs diagonal. Row and column are isequal to iteration.
+            array[iterate][iterate] = value;
+
+            // Second diagonal. Row is isequal to iteration. Column - traversal from end to beginning.
+            int column = lastIndex - iterate;
+            array[iterate][column] = value;
         }
 
         return array;
