@@ -16,6 +16,10 @@ public class Lesson03 {
 
         arrayBinary = setArrayRandomBinaryAlternativeValues(arrayBinary);
         System.out.println(Arrays.toString(arrayBinary));
+
+        // task 2
+        int[] rangefrom1To100 = getRangefrom1To100();
+        System.out.println(Arrays.toString(rangefrom1To100));
     }
 
 
@@ -43,5 +47,17 @@ public class Lesson03 {
         }
 
         return arrayBinary;
+    }
+
+
+    static int[] getRangefrom1To100() {
+        int arrayLength = 100;
+        int[] array = new int[arrayLength];
+
+        for (int iterate = 0; iterate < arrayLength; iterate++) {
+            array[iterate] = iterate + 1;
+        }
+
+        return array;
     }
 }
