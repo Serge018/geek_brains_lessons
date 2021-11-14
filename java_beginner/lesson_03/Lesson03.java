@@ -34,7 +34,10 @@ public class Lesson03 {
 
         // task 5
         int[] arrayWithInitialValue = getArrayWithInitialValue(3, -255);
-        System.out.println(Arrays.toString(arrayWithInitialValue));
+        // System.out.println(Arrays.toString(arrayWithInitialValue));
+
+        // task 6
+        printMinAndMaxValues(array);
     }
 
 
@@ -124,5 +127,25 @@ public class Lesson03 {
         }
 
         return array;
+    }
+
+
+    static void printMinAndMaxValues(int[] array) {
+        int arrayLength = array.length;
+        int minValue = array[0];
+        int maxValue = array[0];
+
+        for (int iterate = 0; iterate < arrayLength; iterate++) {
+            if (array[iterate] < minValue) {
+                minValue = array[iterate];
+            }
+
+            if (array[iterate] > maxValue) {
+                maxValue = array[iterate];
+            }
+        }
+
+        System.out.println("minValue : " + minValue);
+        System.out.println("maxValue : " + maxValue);
     }
 }
