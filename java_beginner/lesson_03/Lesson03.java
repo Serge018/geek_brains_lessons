@@ -31,6 +31,10 @@ public class Lesson03 {
         // for (int i = 0; i < twoDimensionalArray.length; i++) {
         //     System.out.println(Arrays.toString(twoDimensionalArray[i]) + '\n');
         // }
+
+        // task 5
+        int[] arrayWithInitialValue = getArrayWithInitialValue(3, -255);
+        System.out.println(Arrays.toString(arrayWithInitialValue));
     }
 
 
@@ -106,6 +110,17 @@ public class Lesson03 {
             // Second diagonal. Row is equal to iteration. Column - traversal from end to beginning.
             int column = lastIndex - iterate;
             array[iterate][column] = value;
+        }
+
+        return array;
+    }
+
+
+    static int[] getArrayWithInitialValue(int arrayLength, int initialValue) {
+        int[] array = new int[arrayLength];
+
+        for (int iterate = 0; iterate < arrayLength; iterate++) {
+            array[iterate] = initialValue;
         }
 
         return array;
