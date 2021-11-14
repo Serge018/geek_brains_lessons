@@ -14,12 +14,17 @@ public class Lesson03 {
         int[] arrayBinary = getArrayRandomBinary();
         System.out.println(Arrays.toString(arrayBinary));
 
-        arrayBinary = setArrayRandomBinaryAlternativeValues(arrayBinary);
+        setArrayRandomBinaryAlternativeValues(arrayBinary);
         System.out.println(Arrays.toString(arrayBinary));
 
         // task 2
         int[] rangefrom1To100 = getRangefrom1To100();
         System.out.println(Arrays.toString(rangefrom1To100));
+
+        // task 3
+        int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        forEachMultiple(array, 2, 6);
+        System.out.println(Arrays.toString(array));
     }
 
 
@@ -56,6 +61,21 @@ public class Lesson03 {
 
         for (int iterate = 0; iterate < arrayLength; iterate++) {
             array[iterate] = iterate + 1;
+        }
+
+        return array;
+    }
+
+
+    static int[] forEachMultiple(int[] array, int factor, int maxMultiplicand) {
+        int arrayLength = array.length;
+
+        for (int iterate = 0; iterate < arrayLength; iterate++) {
+            int currentValue = array[iterate];
+
+            if (currentValue <= maxMultiplicand) {
+                array[iterate] = currentValue * factor;
+            }
         }
 
         return array;
