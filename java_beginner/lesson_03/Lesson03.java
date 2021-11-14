@@ -100,10 +100,10 @@ public class Lesson03 {
         int lastIndex = arrayLength - 1;
 
         for (int iterate = 0; iterate < arrayLength; iterate++) {
-            // Firs diagonal. Row and column are isequal to iteration.
+            // Firs diagonal. Row and column are equal to iteration.
             array[iterate][iterate] = value;
 
-            // Second diagonal. Row is isequal to iteration. Column - traversal from end to beginning.
+            // Second diagonal. Row is equal to iteration. Column - traversal from end to beginning.
             int column = lastIndex - iterate;
             array[iterate][column] = value;
         }
