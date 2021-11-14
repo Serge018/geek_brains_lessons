@@ -12,19 +12,14 @@ public class Lesson03 {
     public static void main(String[] args) {
         // task 1
         int[] arrayBinary = getArrayRandomBinary();
-        System.out.println(Arrays.toString(arrayBinary));
-
         setArrayRandomBinaryAlternativeValues(arrayBinary);
-        System.out.println(Arrays.toString(arrayBinary));
 
         // task 2
         int[] rangefrom1To100 = getRangefrom1To100();
-        System.out.println(Arrays.toString(rangefrom1To100));
 
         // task 3
         int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         forEachMultiple(array, 2, 6);
-        System.out.println(Arrays.toString(array));
     }
 
 
