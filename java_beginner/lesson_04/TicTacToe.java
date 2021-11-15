@@ -119,12 +119,33 @@ public class TicTacToe {
 
 
     boolean checkRows(char sign, String patternWin) {
+        for (int row = 0; row < SIZE; row++) {
+            String rowContent = new String(table[row]);
+            if (rowContent == patternWin) {
+                return true;
+            }
+        }
 
         return false;
     }
 
 
     boolean checkColumns(char sign, String patternWin) {
+        for (int column = 0; column < SIZE; column++) {
+            String columnContent = "";
+
+            for (int row = 0; row < SIZE; row++) {
+                if (table[row][column] == sign) {
+                    columnContent += sign;
+                } else {
+                    break;
+                }
+            }
+
+            if (rowContent == patternWin) {
+                return true;
+            }
+        }
 
         return false;
     }
@@ -138,6 +159,9 @@ public class TicTacToe {
 
     String getPatternWin(char sign) {
         String pattern = "";
+        for (int iterate = 0; iterate < SIZE; iterate++) {
+            pattern += sign;
+        }
 
         return pattern;
     }
