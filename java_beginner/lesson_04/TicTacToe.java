@@ -98,11 +98,47 @@ public class TicTacToe {
 
 
     boolean isTableFull() {
+        for (int row = 0; row < SIZE; row++) {
+            for (int column = 0; column < SIZE; column++) {
+                if (table[row][column] == SIGN_EMPTY) {
+                    return false;
+                }
+            }
+        }
+
         return true;
     }
 
 
     boolean checkWin(char sign) {
+        String patternWin = getPatternWin(sign);
+        boolean result = (checkRows(sign, patternWin) || checkColumns(sign, patternWin) || checkDiagonals(sign, patternWin));
+
+        return result;
+    }
+
+
+    boolean checkRows(char sign, String patternWin) {
+
+        return false;
+    }
+
+
+    boolean checkColumns(char sign, String patternWin) {
+
+        return false;
+    }
+
+
+    boolean checkDiagonals(char sign, String patternWin) {
+
         return true;
+    }
+
+
+    String getPatternWin(char sign) {
+        String pattern = "";
+
+        return pattern;
     }
 }
