@@ -69,12 +69,21 @@ public class TicTacToe {
 
 
     void initTable() {
-
+        for (int row = 0; row < SIZE; row++) {
+            for (int column = 0; column < SIZE; column++) {
+                table[row][column] = SIGN_EMPTY;
+            }
+        }
     }
 
 
     void printTable() {
-
+        for (int row = 0; row < SIZE; row++) {
+            for (int column = 0; column < SIZE; column++) {
+                System.out.print(table[row][column] + " ");
+            }
+            System.out.println();
+        }
     }
 
 
