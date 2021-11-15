@@ -19,13 +19,14 @@ public class TicTacToe {
     final String MSG_AI_WON = "AI won!";
     final String MSG_DRAW = "Sorry, draw!";
     final String MSG_GAME_OVER = "Game over.";
-    char[][] table;
+    final char[][] table;
     Scanner scanner;
     Random random;
 
 
     public static void main(String[] args) {
-        new TicTacToe();
+        TicTacToe game = new TicTacToe();
+        game.play();
     }
 
 
@@ -33,5 +34,66 @@ public class TicTacToe {
         table = new char[SIZE][SIZE];
         scanner = new Scanner(System.in);
         random = new Random();
+    }
+
+
+    void play() {
+        initTable();
+        printTable();
+
+        while (true) {
+            turnHuman();
+            if (checkWin(SIGN_X)) {
+                System.out.println(MSG_YOU_WON);
+                break;
+            }
+            if (isTableFull()) {
+                System.out.println(MSG_DRAW);
+                break;
+            }
+
+            turnAI();
+            if (checkWin(SIGN_O)) {
+                System.out.println(MSG_AI_WON);
+                break;
+            }
+            if (isTableFull()) {
+                System.out.println(MSG_DRAW);
+                break;
+            }
+        }
+
+        System.out.println(MSG_GAME_OVER);
+        printTable();
+    }
+
+
+    void initTable() {
+
+    }
+
+
+    void printTable() {
+
+    }
+
+
+    void turnHuman() {
+
+    }
+
+
+    void turnAI() {
+
+    }
+
+
+    boolean isTableFull() {
+        return true;
+    }
+
+
+    boolean checkWin(char sign) {
+        return true;
     }
 }
