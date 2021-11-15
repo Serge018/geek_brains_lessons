@@ -152,6 +152,16 @@ public class TicTacToe {
 
 
     boolean checkDiagonals(char sign, String patternWin) {
+        int diagonalSecondColumn = SIZE - 1;
+        String diagonalFirstContent = "";
+        String diagonalSecondContent = "";
+
+        for (int iterate = 0; iterate < SIZE; iterate++, diagonalSecondColumn--) {
+            diagonalFirstContent += table[iterate][iterate];
+            diagonalSecondContent += table[iterate][diagonalSecondColumn];
+        }
+
+        boolean result = (diagonalFirstContent == patternWin || diagonalSecondContent == patternWin);
 
         return true;
     }
