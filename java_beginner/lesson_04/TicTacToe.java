@@ -163,7 +163,7 @@ public class TicTacToe {
 
         boolean result = (diagonalFirstContent == patternWin || diagonalSecondContent == patternWin);
 
-        return true;
+        return result;
     }
 
 
