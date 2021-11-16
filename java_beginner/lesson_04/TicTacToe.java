@@ -2,7 +2,7 @@
  * Java 1. Homework 4
  *
  * @author Sergey Ivenskiy
- * @version 15.10.2021
+ * @version 16.10.2021
  */
 import java.util.Scanner;
 import java.util.Random;
