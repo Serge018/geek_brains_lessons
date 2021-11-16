@@ -38,9 +38,9 @@ public class TicTacToe {
 
     void play() {
         initTable();
-        printTable();
 
         while (true) {
+            printTable();
             turnHuman();
             if (checkWin(SIGN_X)) {
                 System.out.println(MSG_YOU_WON);
@@ -103,6 +103,7 @@ public class TicTacToe {
     void turnAI() {
         int column;
         int row;
+
         do {
             column = random.nextInt(SIZE);
             row = random.nextInt(SIZE);
@@ -147,7 +148,7 @@ public class TicTacToe {
     boolean checkRows(char sign, String patternWin) {
         for (int row = 0; row < SIZE; row++) {
             String rowContent = new String(table[row]);
-            if (rowContent == patternWin) {
+            if (patternWin.equals(rowContent)) {
                 return true;
             }
         }
@@ -168,7 +169,7 @@ public class TicTacToe {
                 }
             }
 
-            if (columnContent == patternWin) {
+            if (patternWin.equals(columnContent)) {
                 return true;
             }
         }
@@ -187,7 +188,7 @@ public class TicTacToe {
             diagonalSecondContent += table[iterate][diagonalSecondColumn];
         }
 
-        boolean result = (diagonalFirstContent == patternWin || diagonalSecondContent == patternWin);
+        boolean result = (patternWin.equals(diagonalFirstContent) || patternWin.equals(diagonalSecondContent));
 
         return result;
     }
