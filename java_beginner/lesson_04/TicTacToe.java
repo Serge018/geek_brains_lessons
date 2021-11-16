@@ -10,7 +10,6 @@ import java.util.Random;
 
 public class TicTacToe {
     final int SIZE = 3;
-    final int WIN_SIZE = 3;
     final char SIGN_X = 'x';
     final char SIGN_O = 'o';
     final char SIGN_EMPTY = '.';
@@ -88,12 +87,39 @@ public class TicTacToe {
 
 
     void turnHuman() {
+        int column;
+        int row;
 
+        do {
+            System.out.println(MSG_FOR_HUMAN);
+            column = scanner.nextInt() - 1;
+            row = scanner.nextInt() - 1;
+        } while (!isCellValid(row, column));
+
+        table[column][row] = SIGN_X;
     }
 
 
     void turnAI() {
+        int column;
+        int row;
+        do {
+            column = random.nextInt(SIZE);
+            row = random.nextInt(SIZE);
+        } while (!isCellValid(row, column));
 
+        table[column][row] = SIGN_O;
+    }
+
+
+    boolean isCellValid(int row, int column) {
+        boolean result = (row >= 0 && row < SIZE && column >= 0 && column < SIZE);
+
+        if (result) {
+            result = table[column][row] == SIGN_EMPTY;
+        }
+
+        return result;
     }
 
 
@@ -142,7 +168,7 @@ public class TicTacToe {
                 }
             }
 
-            if (rowContent == patternWin) {
+            if (columnContent == patternWin) {
                 return true;
             }
         }
