@@ -6,4 +6,6 @@
  */
 interface IAnimal {
 	String voice();
+	void swim(int distance);
+	void run(int distance);
 }
