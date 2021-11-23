@@ -14,5 +14,7 @@ public class AnimalApp {
             System.out.println(animal);
             System.out.println(animal.voice());
         }
+
+        Animal.printChildrensInfo();
     }
 }

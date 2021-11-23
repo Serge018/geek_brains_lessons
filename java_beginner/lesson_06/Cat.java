@@ -7,6 +7,8 @@
 public class Cat extends Animal {
     Cat(String name, String color, int age) {
         super(name, color, age);
+
+        Animal.incrementChildrenCat();
     }
 
 
