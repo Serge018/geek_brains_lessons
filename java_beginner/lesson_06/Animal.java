@@ -7,6 +7,7 @@
 public abstract class Animal implements IAnimal {
     private static int childsCat = 0;
     private static int childsDog = 0;
+    protected String voice;
     protected String name;
     protected String color;
     protected int age;
@@ -15,7 +16,6 @@ public abstract class Animal implements IAnimal {
     Animal(String name, String color, int age) {
         this.name = name;
         this.color = color;
-        this.age = age;
     }
 
 
@@ -31,6 +31,12 @@ public abstract class Animal implements IAnimal {
 
     public static void printChildrensInfo() {
         System.out.println("childs\nCats : " + childsCat + "\nDog : " + childsDog);
+    }
+
+
+    @Override
+    public String voice() {
+        return voice;
     }
 
 
