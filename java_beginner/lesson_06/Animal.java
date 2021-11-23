@@ -16,6 +16,7 @@ public abstract class Animal implements IAnimal {
     Animal(String name, String color, int age) {
         this.name = name;
         this.color = color;
+        this.age = age;
     }
 
 
