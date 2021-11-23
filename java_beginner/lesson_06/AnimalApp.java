@@ -16,5 +16,14 @@ public class AnimalApp {
         }
 
         Animal.printChildrensInfo();
+
+        cat.swim(1);
+        cat.run(130);
+        cat.run(201);
+
+        dog.swim(1);
+        dog.swim(9);
+        dog.run(499);
+        dog.run(500);
     }
 }
