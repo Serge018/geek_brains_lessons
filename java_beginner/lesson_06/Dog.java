@@ -9,6 +9,9 @@ public class Dog extends Animal {
         super(name, color, age);
 
         voice = "gav-gav";
+        runLimit = 500;
+        swimLimit = 10;
+
         incrementChildrenDog();
     }
 }
