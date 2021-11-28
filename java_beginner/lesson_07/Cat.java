@@ -7,6 +7,7 @@
 public class Cat {
     private String name;
     private int appetite;
+    private boolean foolness = false;
 
 
     Cat(String name, int appetite) {
@@ -16,12 +17,16 @@ public class Cat {
 
 
     public void eat(Plate plate) {
-        plate.decreaseFood(appetite);
+        if (foolness) {
+            return;
+        }
+
+        foolness = plate.decreaseFood(appetite);
     }
 
 
     @Override
     public String toString() {
-        return "Cate: " + name + ", appetite: " + appetite;
+        return "Cate: " + name + ", appetite: " + appetite + ", is foolness: " + foolness;
     }
 }
