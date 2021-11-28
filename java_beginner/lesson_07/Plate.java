@@ -13,8 +13,31 @@ public class Plate{
     }
 
 
-    public void decreaseFood(int food) {
-    	this.food -= food;
+    public boolean increaseFood(int food) {
+        boolean result;
+
+        if (food <= 0) {
+            result = false;
+        } else {
+            this.food += food;
+            result = true;
+        }
+
+        return result;
+    }
+
+
+    public boolean decreaseFood(int food) {
+        boolean result;
+
+        if (this.food < food) {
+            result = false;
+        } else {
+            this.food -= food;
+            result = true;
+        }
+
+        return result;
     }
 
 
